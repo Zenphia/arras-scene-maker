@@ -246,7 +246,7 @@ function handleClick(evt){
 			
 		if (isMakingEntity){
 			doMakeEntity = true;
-			if (classInput.value == "autotrapper" || classInput.value == "autogunner" || classInput.value == "autoDouble" || classInput.value == "autosmasher") {
+			if (classInput.value == "autotrapper" || classInput.value == "autogunner" || classInput.value == "autoTriAngle" || classInput.value == "autoDouble" || classInput.value == "autosmasher") {
 				makeEntity(
 					makeEntityType,
 					makeEntityX,
@@ -493,7 +493,7 @@ function getClassBarrels(className){
 	
 	{barrelType: 0, length: 48, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
 ];
-		} else if (className == "triangle"){
+		} else if (className == "triangle" || className == "autoTriAngle"){
 		return [
 	{barrelType: 0, length: 45, width: 19, angle: 0, offsetX: 0, damage: 1, penetration: 1},
 	{barrelType: 0, length: 38, width: 19, angle: 150, offsetX: 0, damage: 1, penetration: 1},
@@ -707,8 +707,11 @@ function getClassBodyType(className){
 	className == "overseer" || 
 	className == "overlord" || 
 	className == "manager" || 
+    
 	className == "triangle" || 
+	className == "autoTriAngle" ||
 	className == "booster" ||
+    
 	className == "penta" ||
 	className == "octo" ||
 	className == "master" ||
